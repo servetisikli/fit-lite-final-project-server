@@ -1,19 +1,46 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
+import morgan from "morgan";
 import connectDB from "./config/db.js";
+import authRoutes from "./routes/authRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
+import { notFound, errorHandler } from "./middlewares/errorMiddleware.js";
 
 dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Use helmet to set various HTTP headers for security
+app.use(helmet());
 
+// Rate limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+});
+app.use(limiter);
+
+// Use morgan to log requests to the console
+app.use(morgan("dev"));
+
+app.use(cors()); // Enable CORS (Cross-Origin Resource Sharing)
+app.use(express.json()); // Parse incoming JSON requests
+
+// Connect to the database
 connectDB();
 
-app.use("/api/products", productRoutes);
+// Routes
+app.use("/api/auth", authRoutes); // Authentication routes
+app.use("/api/products", productRoutes); // Product routes
+app.use("/api/orders", orderRoutes); // Order routes
+
+// Error handling middleware
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
