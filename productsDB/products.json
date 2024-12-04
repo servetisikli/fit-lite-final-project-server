@@ -1,307 +1,261 @@
-{
-  "categories": [
-    {
-      "name": "Fitness Equipments",
-      "subCategories": [
-        {
-          "name": "CARDIO",
-          "products": [
-            {
-              "name": "Treadmill LEXIOS",
-              "description": "High-quality treadmill for cardiovascular exercise",
-              "price": 1200,
-              "stock": 10,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251254/Treadmill_LEXIOS_jyui34.png"
-            },
-            {
-              "name": "Rower AVANSUS-X",
-              "description": "Compact rowing machine for full-body workout",
-              "price": 800,
-              "stock": 15,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251251/Rower_AVANSUS-X_yxwyxe.png"
-            },
-            {
-              "name": "Ergometer EVO-1",
-              "description": "Durable stationary bike with adjustable resistance",
-              "price": 600,
-              "stock": 20,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733231586/Ergometer_Evo-1_r4mlvo.png"
-            },
-            {
-              "name": "Stair Trainer ELIAS",
-              "description": "Efficient stair climbers for endurance training",
-              "price": 700,
-              "stock": 8,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251254/Star_Trainer_EAS10_h5rzdx.png"
-            },
-            {
-              "name": "Elliptical Trainer MAXIMUS-X",
-              "description": "Smooth elliptical trainer for joint-friendly cardio",
-              "price": 900,
-              "stock": 12,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251046/Incline_Trainer_MAXIMUS-X_znghwy.png"
-            }
-          ]
-        },
-        {
-          "name": "AEROBIC",
-          "products": [
-            {
-              "name": "Jacobs Ladder TEC-1",
-              "description": "Innovative cardio ladder for intense workouts",
-              "price": 1500,
-              "stock": 5,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251660/Jacobs_Ladder_TEC-1_cpzbl7.png"
-            },
-            {
-              "name": "Recumbent Bike EASY7TEC",
-              "description": "Comfortable recumbent bike for low-impact exercise",
-              "price": 750,
-              "stock": 10,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251661/Recumbet_Bike_EASY7TEIC_dpnmtu.png"
-            },
-            {
-              "name": "Air Bike AIR-7",
-              "description": "Dynamic air bike for upper and lower body cardio",
-              "price": 850,
-              "stock": 18,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251664/Recumbet_Bike_AIR-7_ngb9ge.png"
-            },
-            {
-              "name": "Jump Rope RXHS",
-              "description": "High-speed jump ropes for aerobic exercises",
-              "price": 20,
-              "stock": 100,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251661/Jump_Rope_RXHS_i9gqiw.png"
-            },
-            {
-              "name": "Crosswalker GOP",
-              "description": "Versatile cross trainer for aerobic fitness",
-              "price": 1100,
-              "stock": 6,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251655/Crosswalker_GOP_zpiqop.png"
-            },
-            {
-              "name": "Crosswalker GOHCEO ESPACE",
-              "description": "Versatile cross trainer for aerobic fitness",
-              "price": 1200,
-              "stock": 10,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251656/Crosswalker_GOHCEO_ESPACE_xgtino.png"
-            }
-          ]
-        },
-        {
-          "name": "WEIGHT TRAINING",
-          "products": [
-            {
-              "name": "Weight Bench POWP LT-1",
-              "description": "Adjustable weight bench for strength training",
-              "price": 300,
-              "stock": 25,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252255/Weight_Bench_POWP_LT-1_to6ev1.png"
-            },
-            {
-              "name": "Resistance Band FTX",
-              "description": "Durable resistance band for muscle building",
-              "price": 50,
-              "stock": 200,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252258/Resistance_Band_FTX_dchmuk.png"
-            },
-            {
-              "name": "Medicine Ball FTX",
-              "description": "Weighted medicine ball for core workouts",
-              "price": 80,
-              "stock": 30,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252257/Medicine_Ball_FTX_ec8uuy.png"
-            },
-            {
-              "name": "Barbell WEOL",
-              "description": "High-strength barbell for weightlifting",
-              "price": 150,
-              "stock": 40,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252255/Barbell_WEOL_cpwc8b.png"
-            },
-            {
-              "name": "Leg Curl Trainer POWP LS-7i",
-              "description": "Efficient leg curl machine for lower body strength",
-              "price": 1200,
-              "stock": 5,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252252/Leg_Curl_Trainer_POWP_LS-7i_ecvjjq.png"
-            }
-          ]
-        },
-        {
-          "name": "BODY BUILDING",
-          "products": [
-            {
-              "name": "Dumbbell ENDURENCE",
-              "description": "Adjustable dumbbells for diverse workouts",
-              "price": 200,
-              "stock": 50,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252578/Dumbell_ENDURENCE_hxvtx2.png"
-            },
-            {
-              "name": "Kettlebell ZIP-PILLES",
-              "description": "Ergonomic kettlebells for functional training",
-              "price": 100,
-              "stock": 60,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252582/Kettlebell_ZIP-PILLES_j6lzmd.png"
-            },
+[
+  {
+    "name": "Treadmill LEXIOS",
+    "description": "High-quality treadmill for cardiovascular exercise",
+    "price": 1200,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251254/Treadmill_LEXIOS_jyui34.png"
+  },
+  {
+    "name": "Rower AVANSUS-X",
+    "description": "Compact rowing machine for full-body workout",
+    "price": 800,
+    "stock": 15,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251251/Rower_AVANSUS-X_yxwyxe.png"
+  },
+  {
+    "name": "Ergometer EVO-1",
+    "description": "Durable stationary bike with adjustable resistance",
+    "price": 600,
+    "stock": 20,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733231586/Ergometer_Evo-1_r4mlvo.png"
+  },
+  {
+    "name": "Stair Trainer ELIAS",
+    "description": "Efficient stair climbers for endurance training",
+    "price": 700,
+    "stock": 8,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251254/Star_Trainer_EAS10_h5rzdx.png"
+  },
+  {
+    "name": "Elliptical Trainer MAXIMUS-X",
+    "description": "Smooth elliptical trainer for joint-friendly cardio",
+    "price": 900,
+    "stock": 12,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251046/Incline_Trainer_MAXIMUS-X_znghwy.png"
+  },
 
-            {
-              "name": "Weight Plate FEOEEL",
-              "description": "Durable weight plates for lifting exercises",
-              "price": 50,
-              "stock": 100,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252586/Weight_Plate_FEOEEL_tfnyeo.png"
-            },
-            {
-              "name": "Multi Pull-Up Bar ORIGEX",
-              "description": "Sturdy pull-up bar for bodyweight exercises",
-              "price": 80,
-              "stock": 30,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252587/Multi_Pull-Up_Bar_ORIGEX_nddlhl.png"
-            },
-            {
-              "name": "Chest Press CY-TEC",
-              "description": "Compact chest press machine for muscle building",
-              "price": 1000,
-              "stock": 8,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252583/Multi_Press_Bar_CY-TEC_orelwn.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Fitness Products",
-      "subCategories": [
-        {
-          "name": "PRE-WORKOUT",
-          "products": [
-            {
-              "name": "Alyne Pre- Workout",
-              "description": "Energy-boosting pre-workout supplement",
-              "price": 30,
-              "stock": 100,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253584/Alyne_Pre-Workout_h9x2f8.png"
-            },
-            {
-              "name": "Cellucor C4 GIMIZA",
-              "description": "Popular pre-workout for enhanced performance",
-              "price": 35,
-              "stock": 90,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253587/Cellucor_GIMIZA_osgmyv.png"
-            },
-            {
-              "name": "Legion Leion PULSE",
-              "description": "Natural pre-workout with effective results",
-              "price": 40,
-              "stock": 80,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253592/Legion_Leion_PULSE_tqathp.png"
-            },
-            {
-              "name": "Creatine OKEA",
-              "description": "Pure creatine for strength and muscle gains",
-              "price": 20,
-              "stock": 150,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253589/Creatine_OKEA_bfo5bt.png"
-            },
-            {
-              "name": "Citrulline Malate",
-              "description": "Supplement for better endurance and pumps",
-              "price": 25,
-              "stock": 120,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253590/Citrulline_Malate_r6h9yn.png"
-            }
-          ]
-        },
-        {
-          "name": "POST WORKOUT",
-          "products": [
-            {
-              "name": "Electrolytes ELYCTIVIES",
-              "description": "Rehydrating electrolytes for recovery",
-              "price": 15,
-              "stock": 200,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253871/Electrolytes_ELYCTIVIES_wrzsy3.png"
-            },
-            {
-              "name": "Glutamine GLIMEP",
-              "description": "Amino acid supplement for muscle recovery",
-              "price": 25,
-              "stock": 120,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253875/Glutamine_GLIMEP_fyjeyx.png"
-            },
-            {
-              "name": "Carnitine ERA",
-              "description": "Fat-burning post-workout supplement",
-              "price": 30,
-              "stock": 100,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253865/Carnitine_ERA_nnp8ko.png"
-            },
-            {
-              "name": "Whey Protein VAF",
-              "description": "High-quality whey protein for muscle repair",
-              "price": 60,
-              "stock": 90,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253875/Whey_Protein_VAF_xwbfav.png"
-            },
-            {
-              "name": "Cyclic Dextrin CYLLICE",
-              "description": "Fast-digesting carb for post-workout energy",
-              "price": 40,
-              "stock": 70,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253870/Cyclic_Dextrin_CYLLICE_m5hwdj.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Accessories",
-      "subCategories": [
-        {
-          "name": "GENERAL",
-          "products": [
-            {
-              "name": "Fitness Ball FTX",
-              "description": "Durable fitness ball for balance and core training",
-              "price": 25,
-              "stock": 100,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733137224/fitball_es8ha0.jpg"
-            },
-            {
-              "name": "Push Up Handle FTX-SS",
-              "description": "Ergonomic push-up handles for upper body strength",
-              "price": 20,
-              "stock": 150,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254554/Push_up_Handle_mhstkk.png"
-            },
-            {
-              "name": "Skipping Ropes FTX-MS",
-              "description": "High-quality skipping ropes for cardio exercises",
-              "price": 10,
-              "stock": 200,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254992/sport-1283791_1280_cn3ago.jpg"
-            },
-            {
-              "name": "Yoga Mat FTX-LT",
-              "description": "Non-slip yoga mat for comfortable exercise",
-              "price": 30,
-              "stock": 120,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254562/Yoga_Mat_q9gw0x.png"
-            },
-            {
-              "name": "Hand Grip FTX-SX",
-              "description": "Non-slip yoga mat for comfortable exercise",
-              "price": 30,
-              "stock": 120,
-              "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254945/healthy-1283793_1280_ghgky9.jpg"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Jacobs Ladder TEC-1",
+    "description": "Innovative cardio ladder for intense workouts",
+    "price": 1500,
+    "stock": 5,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251660/Jacobs_Ladder_TEC-1_cpzbl7.png"
+  },
+  {
+    "name": "Recumbent Bike EASY7TEC",
+    "description": "Comfortable recumbent bike for low-impact exercise",
+    "price": 750,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251661/Recumbet_Bike_EASY7TEIC_dpnmtu.png"
+  },
+  {
+    "name": "Air Bike AIR-7",
+    "description": "Dynamic air bike for upper and lower body cardio",
+    "price": 850,
+    "stock": 18,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251664/Recumbet_Bike_AIR-7_ngb9ge.png"
+  },
+  {
+    "name": "Jump Rope RXHS",
+    "description": "High-speed jump ropes for aerobic exercises",
+    "price": 20,
+    "stock": 100,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251661/Jump_Rope_RXHS_i9gqiw.png"
+  },
+  {
+    "name": "Crosswalker GOP",
+    "description": "Versatile cross trainer for aerobic fitness",
+    "price": 1100,
+    "stock": 6,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251655/Crosswalker_GOP_zpiqop.png"
+  },
+  {
+    "name": "Crosswalker GOHCEO ESPACE",
+    "description": "Versatile cross trainer for aerobic fitness",
+    "price": 1200,
+    "stock": 10,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733251656/Crosswalker_GOHCEO_ESPACE_xgtino.png"
+  },
+
+  {
+    "name": "Weight Bench POWP LT-1",
+    "description": "Adjustable weight bench for strength training",
+    "price": 300,
+    "stock": 25,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252255/Weight_Bench_POWP_LT-1_to6ev1.png"
+  },
+  {
+    "name": "Resistance Band FTX",
+    "description": "Durable resistance band for muscle building",
+    "price": 50,
+    "stock": 200,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252258/Resistance_Band_FTX_dchmuk.png"
+  },
+  {
+    "name": "Medicine Ball FTX",
+    "description": "Weighted medicine ball for core workouts",
+    "price": 80,
+    "stock": 30,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252257/Medicine_Ball_FTX_ec8uuy.png"
+  },
+  {
+    "name": "Barbell WEOL",
+    "description": "High-strength barbell for weightlifting",
+    "price": 150,
+    "stock": 40,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252255/Barbell_WEOL_cpwc8b.png"
+  },
+  {
+    "name": "Leg Curl Trainer POWP LS-7i",
+    "description": "Efficient leg curl machine for lower body strength",
+    "price": 1200,
+    "stock": 5,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252252/Leg_Curl_Trainer_POWP_LS-7i_ecvjjq.png"
+  },
+
+  {
+    "name": "Dumbbell ENDURENCE",
+    "description": "Adjustable dumbbells for diverse workouts",
+    "price": 200,
+    "stock": 50,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252578/Dumbell_ENDURENCE_hxvtx2.png"
+  },
+  {
+    "name": "Kettlebell ZIP-PILLES",
+    "description": "Ergonomic kettlebells for functional training",
+    "price": 100,
+    "stock": 60,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252582/Kettlebell_ZIP-PILLES_j6lzmd.png"
+  },
+
+  {
+    "name": "Weight Plate FEOEEL",
+    "description": "Durable weight plates for lifting exercises",
+    "price": 50,
+    "stock": 100,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252586/Weight_Plate_FEOEEL_tfnyeo.png"
+  },
+  {
+    "name": "Multi Pull-Up Bar ORIGEX",
+    "description": "Sturdy pull-up bar for bodyweight exercises",
+    "price": 80,
+    "stock": 30,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252587/Multi_Pull-Up_Bar_ORIGEX_nddlhl.png"
+  },
+  {
+    "name": "Chest Press CY-TEC",
+    "description": "Compact chest press machine for muscle building",
+    "price": 1000,
+    "stock": 8,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733252583/Multi_Press_Bar_CY-TEC_orelwn.png"
+  },
+
+  {
+    "name": "Alyne Pre- Workout",
+    "description": "Energy-boosting pre-workout supplement",
+    "price": 30,
+    "stock": 100,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253584/Alyne_Pre-Workout_h9x2f8.png"
+  },
+  {
+    "name": "Cellucor C4 GIMIZA",
+    "description": "Popular pre-workout for enhanced performance",
+    "price": 35,
+    "stock": 90,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253587/Cellucor_GIMIZA_osgmyv.png"
+  },
+  {
+    "name": "Legion Leion PULSE",
+    "description": "Natural pre-workout with effective results",
+    "price": 40,
+    "stock": 80,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253592/Legion_Leion_PULSE_tqathp.png"
+  },
+  {
+    "name": "Creatine OKEA",
+    "description": "Pure creatine for strength and muscle gains",
+    "price": 20,
+    "stock": 150,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253589/Creatine_OKEA_bfo5bt.png"
+  },
+  {
+    "name": "Citrulline Malate",
+    "description": "Supplement for better endurance and pumps",
+    "price": 25,
+    "stock": 120,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253590/Citrulline_Malate_r6h9yn.png"
+  },
+
+  {
+    "name": "Electrolytes ELYCTIVIES",
+    "description": "Rehydrating electrolytes for recovery",
+    "price": 15,
+    "stock": 200,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253871/Electrolytes_ELYCTIVIES_wrzsy3.png"
+  },
+  {
+    "name": "Glutamine GLIMEP",
+    "description": "Amino acid supplement for muscle recovery",
+    "price": 25,
+    "stock": 120,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253875/Glutamine_GLIMEP_fyjeyx.png"
+  },
+  {
+    "name": "Carnitine ERA",
+    "description": "Fat-burning post-workout supplement",
+    "price": 30,
+    "stock": 100,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253865/Carnitine_ERA_nnp8ko.png"
+  },
+  {
+    "name": "Whey Protein VAF",
+    "description": "High-quality whey protein for muscle repair",
+    "price": 60,
+    "stock": 90,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253875/Whey_Protein_VAF_xwbfav.png"
+  },
+  {
+    "name": "Cyclic Dextrin CYLLICE",
+    "description": "Fast-digesting carb for post-workout energy",
+    "price": 40,
+    "stock": 70,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733253870/Cyclic_Dextrin_CYLLICE_m5hwdj.png"
+  },
+
+  {
+    "name": "Fitness Ball FTX",
+    "description": "Durable fitness ball for balance and core training",
+    "price": 25,
+    "stock": 100,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733137224/fitball_es8ha0.jpg"
+  },
+  {
+    "name": "Push Up Handle FTX-SS",
+    "description": "Ergonomic push-up handles for upper body strength",
+    "price": 20,
+    "stock": 150,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254554/Push_up_Handle_mhstkk.png"
+  },
+  {
+    "name": "Skipping Ropes FTX-MS",
+    "description": "High-quality skipping ropes for cardio exercises",
+    "price": 10,
+    "stock": 200,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254992/sport-1283791_1280_cn3ago.jpg"
+  },
+  {
+    "name": "Yoga Mat FTX-LT",
+    "description": "Non-slip yoga mat for comfortable exercise",
+    "price": 30,
+    "stock": 120,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254562/Yoga_Mat_q9gw0x.png"
+  },
+  {
+    "name": "Hand Grip FTX-SX",
+    "description": " Increase muscular strength and build endurance in the arms.",
+    "price": 30,
+    "stock": 120,
+    "image": "https://res.cloudinary.com/dw5lopqza/image/upload/c_thumb,w_200,g_face/v1733254945/healthy-1283793_1280_ghgky9.jpg"
+  }
+]
