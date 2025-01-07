@@ -27,7 +27,12 @@ app.use(limiter);
 // Use morgan to log requests to the console
 app.use(morgan("dev"));
 
-app.use(cors()); // Enable CORS (Cross-Origin Resource Sharing)
+// Enable CORS (Cross-Origin Resource Sharing)
+const corsOptions = {
+  origin: "http://localhost:5173",
+};
+app.use(cors(corsOptions));
+
 app.use(express.json()); // Parse incoming JSON requests
 
 // Connect to the database
