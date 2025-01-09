@@ -108,13 +108,23 @@ export const searchProducts = async (req, res) => {
 
     // Ensure the query is targeting the 'name' field only
     const products = await Product.find({
-      name: { $regex: query, $options: "i" }
-    }).select('name description price stock image'); // Specify the fields to return
-
+      name: { $regex: query, $options: "i" },
+    }).select("name description price stock image"); // Specify the fields to return
 
     res.status(200).json(products);
   } catch (error) {
     console.error("Error during product search:", error);
     res.status(500).json({ message: "Failed to search products.", error });
+  }
+};
+// Find by Category
+
+export const findByCategory = async (req, res) => {
+  try {
+    const products = await Product.find({ category: req.params.category });
+    console.log(req.params);
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to find category" });
   }
 };

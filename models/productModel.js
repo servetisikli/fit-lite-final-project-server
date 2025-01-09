@@ -17,7 +17,7 @@ const ProductSchema = new mongoose.Schema({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   stock: { type: Number, required: true },
-  category: { type: CategorySchema, required: true }, // Main category with subcategories
+  category: { type: String, required: true }, // Main category with subcategories
   image: { type: String, required: true }, // Image URL
   createdAt: { type: Date, default: Date.now },
 });
