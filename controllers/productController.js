@@ -108,7 +108,10 @@ export const searchProducts = async (req, res) => {
 
     // Ensure the query is targeting the 'name' field only
     const products = await Product.find({
-      name: { $regex: query, $options: "i" },
+      $or: [
+        { name: { $regex: query, $options: "i" } },
+        { category: { $regex: query, $options: "i" } },
+      ],
     }).select("name description price stock image"); // Specify the fields to return
 
     res.status(200).json(products);
