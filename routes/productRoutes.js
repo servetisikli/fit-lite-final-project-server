@@ -5,10 +5,12 @@ import {
   getProductById,
   updateProduct,
   deleteProduct,
+  findByCategory,
 } from "../controllers/productController.js";
 const router = express.Router();
 
 // CRUD routes
+router.get("/category/:category", findByCategory);
 router.post("/", createProduct); // Create
 router.get("/", getProducts); // Read all
 router.get("/:id", getProductById); // Read by ID

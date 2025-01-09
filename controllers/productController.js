@@ -96,3 +96,15 @@ export const deleteProduct = async (req, res) => {
     res.status(500).json({ message: "Failed to delete product.", error });
   }
 };
+
+// Find by Category
+
+export const findByCategory = async (req, res) => {
+  try {
+    const products = await Product.find({ category: req.params.category });
+    console.log(req.params);
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to find category" });
+  }
+};
