@@ -1,76 +1,82 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const orderSchema = mongoose.Schema(
-  {
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+const orderSchema = new mongoose.Schema({
+  orderNumber: {
+    type: String,
+    unique: true,
+    required: true,
+    default: () => 'ORD-' + Math.random().toString(36).substring(2, 8).toUpperCase()
+  },
+  customerInfo: {
+    firstName: {
+      type: String,
+      required: [true, 'First name is required']
     },
-    orderItems: [
-      {
-        name: { type: String, required: true },
-        qty: { type: Number, required: true },
-        image: { type: String, required: true },
-        price: { type: Number, required: true },
-        product: {
-          type: mongoose.Schema.Types.ObjectId,
-          required: true,
-          ref: "Product",
-        },
-      },
-    ],
-    shippingAddress: {
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      postalCode: { type: String, required: true },
-      country: { type: String, required: true },
+    lastName: {
+      type: String,
+      required: [true, 'Last name is required']
     },
-    paymentMethod: {
+    email: {
+      type: String,
+      required: [true, 'Email is required'],
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email']
+    },
+    phone: {
+      type: String,
+      required: [true, 'Phone number is required']
+    }
+  },
+  shippingAddress: {
+    address: {
+      type: String,
+      required: [true, 'Address is required']
+    },
+    city: {
+      type: String,
+      required: [true, 'City is required']
+    },
+    zipCode: {
+      type: String,
+      required: [true, 'ZIP code is required']
+    },
+    country: {
+      type: String,
+      required: [true, 'Country is required']
+    }
+  },
+  orderItems: [{
+    productId: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: Number,
+      required: true
+    },
+    quantity: {
+      type: Number,
+      required: true,
+      min: 1
+    }
+  }],
+  paymentInfo: {
+    method: {
       type: String,
       required: true,
+      enum: ['credit_card', 'paypal', 'bank_transfer']
     },
-    itemsPrice: {
-      type: Number,
+    status: {
+      type: String,
       required: true,
-      default: 0.0,
-    },
-    taxPrice: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    shippingPrice: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    totalPrice: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    isPaid: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-    paidAt: {
-      type: Date,
-    },
-    isDelivered: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-    deliveredAt: {
-      type: Date,
-    },
-  },
-  {
-    timestamps: true,
+      enum: ['pending', 'completed', 'failed']
+    }
   }
-);
+});
 
-const Order = mongoose.model("Order", orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 export default Order;

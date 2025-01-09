@@ -5,8 +5,12 @@ import {
   getProductById,
   updateProduct,
   deleteProduct,
+  searchProducts,
 } from "../controllers/productController.js";
 const router = express.Router();
+
+// Import searchProducts from productController
+router.get('/search', searchProducts);
 
 // CRUD routes
 router.post("/", createProduct); // Create
@@ -14,5 +18,6 @@ router.get("/", getProducts); // Read all
 router.get("/:id", getProductById); // Read by ID
 router.put("/:id", updateProduct); // Update
 router.delete("/:id", deleteProduct); // Delete
+
 
 export default router;

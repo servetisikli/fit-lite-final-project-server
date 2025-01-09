@@ -96,3 +96,25 @@ export const deleteProduct = async (req, res) => {
     res.status(500).json({ message: "Failed to delete product.", error });
   }
 };
+
+// SEARCH: Search products by name
+export const searchProducts = async (req, res) => {
+  try {
+    const query = req.query.q;
+
+    if (!query) {
+      return res.status(400).json({ message: "Query parameter is required." });
+    }
+
+    // Ensure the query is targeting the 'name' field only
+    const products = await Product.find({
+      name: { $regex: query, $options: "i" }
+    }).select('name description price stock image'); // Specify the fields to return
+
+
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error during product search:", error);
+    res.status(500).json({ message: "Failed to search products.", error });
+  }
+};
