@@ -112,7 +112,7 @@ export const searchProducts = async (req, res) => {
         { name: { $regex: query, $options: "i" } },
         { category: { $regex: query, $options: "i" } },
       ],
-    }).select("name description price stock image"); // Specify the fields to return
+    }).select("name category description price stock image"); // Specify the fields to return
 
     res.status(200).json(products);
   } catch (error) {
