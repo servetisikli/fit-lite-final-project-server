@@ -1,15 +1,18 @@
-import { check, validationResult } from "express-validator";
-import User from "../models/userModel.js";
-import bcrypt from "bcryptjs";
-import generateToken from "../utils/generateToken.js";
-import dotenv from "dotenv";
+import User from '../models/userModel.js';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import { check, validationResult } from 'express-validator';
 
-dotenv.config();
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: '30d',
+  });
+};
 
 // User registration
 export const registerUser = [
   // Validation rules
-  check("name", "Name is required").not().isEmpty(),
+  check("username", "Username is required").not().isEmpty(),
   check("email", "Please include a valid email").isEmail(),
   check("password", "Password must be 6 or more characters").isLength({ min: 6 }),
 
@@ -19,7 +22,7 @@ export const registerUser = [
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
     try {
       // User exists
@@ -34,7 +37,7 @@ export const registerUser = [
 
       // Create user
       const user = await User.create({
-        name,
+        username,
         email,
         password: hashedPassword,
       });
@@ -42,7 +45,7 @@ export const registerUser = [
       if (user) {
         res.status(201).json({
           _id: user.id,
-          name: user.name,
+          username: user.username,
           email: user.email,
           token: generateToken(user._id),
         });
@@ -76,7 +79,7 @@ export const loginUser = [
       if (user && (await bcrypt.compare(password, user.password))) {
         res.status(200).json({
           _id: user.id,
-          name: user.name,
+          username: user.username,
           email: user.email,
           token: generateToken(user._id),
         });
@@ -88,3 +91,22 @@ export const loginUser = [
     }
   }
 ];
+
+// Get current user
+export const getMe = async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id);
+
+    if (user) {
+      res.status(200).json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+      });
+    } else {
+      res.status(404).json({ message: "User not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};

@@ -1,8 +1,23 @@
 import Order from '../models/orderModel.js';
+import jwt from 'jsonwebtoken';
+import User from '../models/userModel.js';
 
 export const createOrder = async (req, res) => {
   try {
+    let user = null;
+
+    if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
+      try {
+        const token = req.headers.authorization.split(" ")[1];
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        user = await User.findById(decoded.id).select("-password");
+      } catch (error) {
+        console.error("Token:", error);
+      }
+    }
+
     const orderData = {
+      user: user ? user._id : null, 
       customerInfo: req.body.customerInfo,
       shippingAddress: req.body.shippingAddress,
       orderItems: req.body.orderItems,
@@ -27,7 +42,7 @@ export const createOrder = async (req, res) => {
 
 export const getOrders = async (req, res) => {
   try {
-    const orders = await Order.find().sort({ createdAt: -1 });
+    const orders = await Order.find({ user: req.user._id }).sort({ createdAt: -1 });
 
     res.status(200).json({
       success: true,
