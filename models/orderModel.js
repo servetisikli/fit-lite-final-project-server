@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const orderSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     default: null,
   },
   orderNumber: {
@@ -12,6 +12,11 @@ const orderSchema = new mongoose.Schema({
     required: true,
     default: () =>
       "ORD-" + Math.random().toString(36).substring(2, 8).toUpperCase(),
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now, // Automatically set the current timestamp
+    required: true,
   },
   customerInfo: {
     firstName: {
