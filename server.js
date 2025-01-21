@@ -29,7 +29,7 @@ app.use(morgan("dev"));
 
 // Enable CORS (Cross-Origin Resource Sharing)
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://fitlite.netlify.app",
 };
 app.use(cors(corsOptions));
 
